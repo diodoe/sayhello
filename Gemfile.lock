@@ -81,8 +81,8 @@ GEM
       rspec (>= 2.0.0.beta.14)
       webrat (>= 0.7.0)
     spork (0.8.4)
-    sqlite3 (0.1.1)
-      ffi (>= 0.6.3)
+    sqlite3 (0.0.8)
+      ffi (>= 0.6.0)
     sqlite3-ruby (1.2.5)
     thor (0.14.0)
     treetop (1.4.8)
@@ -104,5 +104,5 @@ DEPENDENCIES
   rspec (= 2.0.0.beta.18)
   rspec-rails (= 2.0.0.beta.18)
   spork (= 0.8.4)
-  sqlite3
+  sqlite3 (= 0.0.8)
   sqlite3-ruby (= 1.2.5)
