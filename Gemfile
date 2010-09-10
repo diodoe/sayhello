@@ -9,7 +9,8 @@ gem 'sqlite3', '0.0.8'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'    
 gem 'gravatar_image_tag', '0.1.0'
 
-group :development do
+group :development do       
+  gem 'sqlite3-ruby'
   gem 'rspec-rails', '2.0.0.beta.18'     
   gem 'annotate-models', '1.0.4'
 end
