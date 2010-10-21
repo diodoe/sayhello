@@ -251,3 +251,11 @@ div.field input[type=text],div.field input[type=password] {
    width: 350px;
    background: #fff;
 }
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}

@@ -10,7 +10,11 @@ module SessionsHelper
   end
   def current_user
     @current_user ||= user_from_remember_token
-  end          
+  end        
+  
+  def current_user?(user)
+    current_user == user
+  end  
   
   def signed_in?
     !current_user.nil?
@@ -19,6 +23,27 @@ module SessionsHelper
   def sign_out
       cookies.delete(:remember_token)
       self.current_user = nil   #self is the controller
+  end
+  
+  def deny_access
+    store_location
+    #the follwing commented line are the same as the last not commented
+    #flash[:notice] = "Please sign in to access this page."
+    #redirect_to signin_path
+    redirect_to signin_path, :notice => 'Plese, sign in to acces this page' #rails3 new feature. doesn't work for :succes
+  end
+  
+  def store_location
+    session[:return_to]= request.fullpath
+  end
+  
+  def redirect_back_or(default)
+    redirect_to(session[:return_to] || default)
+    clear_return_to
+  end
+  
+  def clear_return_to
+    session[:return_to]= nil
   end
 
   private
