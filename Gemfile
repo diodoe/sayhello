@@ -15,7 +15,8 @@ gem 'sqlite3-ruby', '1.3.1' , :require => 'sqlite3'
 group :production do
 end
 
-group :development do       
+group :development do      
+  #gem 'ruby-debug-ide', :require => 'ruby-debug'
   gem 'rspec-rails', '2.0.0.beta.18'     
   gem 'annotate-models', '1.0.4'
 end
